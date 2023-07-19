@@ -2,33 +2,58 @@
  * @param {string} s
  * @return {boolean}
  */
-var bestTimeToBuyAndSellStock = function (stocks) {
 
-    // set up two variables to keep track of the pointers of the stocks
-    // set up variable to keep track of highest profit
-    //
+var maxProfit = function (prices) {
+    //     // set up two variables to keep track of the pointers of the stocks
+    //     // set up variable to keep track of highest profit
+    //     //
 
 
-    // [5, 100, 1, 5]
+    //     // [5, 100, 1, 5]
 
-    let left = 0;
-    let right = 1;
-    let highestProfit = 0;
+    let l = 0;
+    let r = 1;
+    let profit = 0;
 
-    while(right < stocks.length) {
-        if(stocks[left] > stocks[right]) {
-            left = right
-        } else {
-            let tempProfit = stocks[right] - stocks[left]
-            if(highestProfit < tempProfit) {
-                highestProfit = tempProfit
-            }
+    while (r < prices.length) {
+        let left = prices[l]
+        let right = prices[r]
+
+        if (left > right) {
+            l = r
+        } else if (right - left > profit) {
+            profit = right - left
         }
-        right++
+        r++
     }
 
-    return highestProfit
-
+    return profit
 };
 
-export default bestTimeToBuyAndSellStock
+
+// var maxProfit = function (prices) {
+//     // [5, 100, 1, 5]
+
+//     let l = 0;
+//     let r = 1;
+//     let profit = 0;
+
+//     while (r < prices.length) {
+//         let left = prices[l]
+//         let right = prices[r]
+
+//         if (right - left > profit) {
+//             profit = right - left
+//         }
+
+//         if (r === prices.length - 1) {
+//             l++
+//             r = l
+//         }
+
+//         r++
+//     }
+//     return profit
+// };
+
+export default maxProfit
