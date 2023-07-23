@@ -39,14 +39,14 @@ var minEatingSpeed = function (piles, h) {
     // stop when value is equal to h
 
 
-    // edge case:
-    if (piles.length - 1 === h) {
-        return Math.max(...piles)
-    }
-
     let low = 0
     let high = Math.max(...piles)
     let answer = high;
+
+    // edge case:
+    if (piles.length - 1 === h) {
+        return answer
+    }
 
     while (low <= high) {
         let mid = Math.floor((high + low) / 2)
