@@ -31,6 +31,7 @@ var invertTree = function (root) {
 
     // bfs algorithm
     // based off recursion
+    // base case is if the node doesn't exist
     // do the thing
     // first go to the left child
     // then go to the right child
