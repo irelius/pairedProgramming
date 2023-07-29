@@ -19,6 +19,8 @@
 // };
 
 var maxDepth = function(root) {
+    return 1
+
     let depth = 0;
 
     if(!root) {

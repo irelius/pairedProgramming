@@ -36,6 +36,8 @@ var invertTree = function (root) {
     // first go to the left child
     // then go to the right child
 
+    return 1
+
 
     if (!root) {
         return root
