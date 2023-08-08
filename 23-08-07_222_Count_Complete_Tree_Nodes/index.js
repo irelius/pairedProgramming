@@ -10,7 +10,9 @@
  * @param {TreeNode} root
  * @return {number}
  */
+// this problem asks for faster than O(n) time complexity, but I got no clue how to do that
 var countNodes = function (root) {
+
     if (!root) {
         return counter
     }
